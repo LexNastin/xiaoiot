@@ -1,0 +1,90 @@
+syntax = "proto3";
+
+// TODO: perhaps for normal scooter config such as lamp?? (prob nah)
+
+message ChargingData {
+    int64 timestamp = 1; // ms
+    int32 battery_voltage = 2; // scale by 100
+    int32 battery_percentage = 3;
+    int32 amperage = 4; // scale by 10
+    int32 ecu_temperature = 5;
+    int32 battery_temperature = 6;
+    int32 remaining_mah = 7;
+}
+
+message Configuration {
+    int32 ble_version = 1; // "132"
+    int32 drv_version = 2; // "247"
+    int32 bms_version = 3; // "141"
+    int32 iot_version = 4; // "001"
+    bool shfw_installed = 5;
+    // TODO: perhaps have SHFW_Setting? (if shfw_installed)
+}
+
+message DataDump {
+    repeated DataPoint data_points = 1;
+}
+
+message DataPoint {
+    int64 timestamp = 1; // ms
+    int32 battery_voltage = 2; // scale by 100
+    int32 speed = 3; // scale by 10
+    bool in_motion = 4;
+    bool locked = 5;
+    int32 battery_percentage = 6;
+    int32 throttle_value = 7; // prob scale by 10 (lose precision)
+    int32 brake_value = 8; // prob scale by 10 (lose precision)
+    int32 amperage = 9; // scale by 10
+    int32 ecu_temperature = 10;
+    int32 battery_temperature = 11;
+    int32 remaining_mah = 12;
+    Location location = 13; // only put that in if it changed
+    int32 uptime = 14;
+    bool is_charging = 15;
+    int32 trip_km = 16; // scale by 10
+}
+
+message Location {
+    float latitude = 1;
+    float longitude = 2;
+}
+
+message LocationData {
+    int64 timestamp = 1; // ms
+    Location location = 2;
+}
+
+enum Mode {
+    ECO = 0;
+    SPORT = 1;
+    DRIVE = 2;
+}
+
+message SHFW_Setting {
+    // TODO: create specification...
+}
+
+enum State {
+    ASLEEP = 0;
+    ONLINE = 1;
+    CHARGING = 2;
+}
+
+message ToScooter {
+    oneof sub_message {
+        bool lock = 1;
+        Mode mode = 2;
+        int32 shfw_profile = 3;
+        SHFW_Setting shfw_setting = 4;
+    }
+}
+
+message FromScooter {
+    State state = 1;
+    oneof sub_message {
+        Configuration configuration = 2;
+        DataDump data_dump = 3;
+        LocationData location_data = 4;
+        ChargingData charging_data = 5;
+    }
+}
