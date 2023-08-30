@@ -36,27 +36,6 @@ for i in range(1440*28):
                 server.sendline(KEY + location_update.SerializeToString())
                 server.recvuntil((b"OK", b"AUTH", b"ERR"))
 
-            # precise data at 2Hz once per minute
-            for _ in range(2):
-                data_point = from_scooter.online_data_dump.online_data.add()
-                data_point.timestamp = round(dt.now().timestamp() * 1000)
-                data_point.battery_voltage = round(38.2 * 10)
-                data_point.speed = round(28.7 * 10)
-                data_point.in_motion = True
-                data_point.locked = False
-                data_point.battery_percentage = 67
-                data_point.throttle_value = round(200 / 10)
-                data_point.brake_value = round(0 / 10)
-                data_point.amperage = round(28.4 * 10)
-                data_point.ecu_temperature = 37
-                data_point.battery_temperature = 41
-                data_point.remaining_mah = 6892
-                data_point.location.latitude = 54.56
-                data_point.location.longitude = -6.78
-                data_point.uptime = time_of_day * 60 + j
-                data_point.is_charging = True
-                data_point.trip_km = round((time_of_day * 0.2) * 10)
-
         server.sendline(KEY + from_scooter.SerializeToString())
         server.recvuntil((b"OK", b"AUTH", b"ERR"))
     elif time_of_day < 8 * 60:

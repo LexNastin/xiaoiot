@@ -13,7 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0b\x63omms.proto\"\xb5\x01\n\x0c\x43hargingData\x12\x11\n\ttimestamp\x18\x01 \x01(\x03\x12\x17\n\x0f\x62\x61ttery_voltage\x18\x02 \x01(\x05\x12\x1a\n\x12\x62\x61ttery_percentage\x18\x03 \x01(\x05\x12\x10\n\x08\x61mperage\x18\x04 \x01(\x05\x12\x17\n\x0f\x65\x63u_temperature\x18\x05 \x01(\x05\x12\x1b\n\x13\x62\x61ttery_temperature\x18\x06 \x01(\x05\x12\x15\n\rremaining_mah\x18\x07 \x01(\x05\"{\n\rConfiguration\x12\x13\n\x0b\x62le_version\x18\x01 \x01(\x05\x12\x13\n\x0b\x64rv_version\x18\x02 \x01(\x05\x12\x13\n\x0b\x62ms_version\x18\x03 \x01(\x05\x12\x13\n\x0biot_version\x18\x04 \x01(\x05\x12\x16\n\x0eshfw_installed\x18\x05 \x01(\x08\"+\n\x08\x44\x61taDump\x12\x1f\n\x0b\x64\x61ta_points\x18\x01 \x03(\x0b\x32\n.DataPoint\"\xe4\x02\n\tDataPoint\x12\x11\n\ttimestamp\x18\x01 \x01(\x03\x12\x17\n\x0f\x62\x61ttery_voltage\x18\x02 \x01(\x05\x12\r\n\x05speed\x18\x03 \x01(\x05\x12\x11\n\tin_motion\x18\x04 \x01(\x08\x12\x0e\n\x06locked\x18\x05 \x01(\x08\x12\x1a\n\x12\x62\x61ttery_percentage\x18\x06 \x01(\x05\x12\x16\n\x0ethrottle_value\x18\x07 \x01(\x05\x12\x13\n\x0b\x62rake_value\x18\x08 \x01(\x05\x12\x10\n\x08\x61mperage\x18\t \x01(\x05\x12\x17\n\x0f\x65\x63u_temperature\x18\n \x01(\x05\x12\x1b\n\x13\x62\x61ttery_temperature\x18\x0b \x01(\x05\x12\x15\n\rremaining_mah\x18\x0c \x01(\x05\x12\x1b\n\x08location\x18\r \x01(\x0b\x32\t.Location\x12\x0e\n\x06uptime\x18\x0e \x01(\x05\x12\x13\n\x0bis_charging\x18\x0f \x01(\x08\x12\x0f\n\x07trip_km\x18\x10 \x01(\x05\"/\n\x08Location\x12\x10\n\x08latitude\x18\x01 \x01(\x02\x12\x11\n\tlongitude\x18\x02 \x01(\x02\">\n\x0cLocationData\x12\x11\n\ttimestamp\x18\x01 \x01(\x03\x12\x1b\n\x08location\x18\x02 \x01(\x0b\x32\t.Location\"\x0e\n\x0cSHFW_Setting\"\x80\x01\n\tToScooter\x12\x0e\n\x04lock\x18\x01 \x01(\x08H\x00\x12\x15\n\x04mode\x18\x02 \x01(\x0e\x32\x05.ModeH\x00\x12\x16\n\x0cshfw_profile\x18\x03 \x01(\x05H\x00\x12%\n\x0cshfw_setting\x18\x04 \x01(\x0b\x32\r.SHFW_SettingH\x00\x42\r\n\x0bsub_message\"\xcc\x01\n\x0b\x46romScooter\x12\x15\n\x05state\x18\x01 \x01(\x0e\x32\x06.State\x12\'\n\rconfiguration\x18\x02 \x01(\x0b\x32\x0e.ConfigurationH\x00\x12\x1e\n\tdata_dump\x18\x03 \x01(\x0b\x32\t.DataDumpH\x00\x12&\n\rlocation_data\x18\x04 \x01(\x0b\x32\r.LocationDataH\x00\x12&\n\rcharging_data\x18\x05 \x01(\x0b\x32\r.ChargingDataH\x00\x42\r\n\x0bsub_message*%\n\x04Mode\x12\x07\n\x03\x45\x43O\x10\x00\x12\t\n\x05SPORT\x10\x01\x12\t\n\x05\x44RIVE\x10\x02*-\n\x05State\x12\n\n\x06\x41SLEEP\x10\x00\x12\n\n\x06ONLINE\x10\x01\x12\x0c\n\x08\x43HARGING\x10\x02\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0b\x63omms.proto\")\n\nAsleepData\x12\x1b\n\x08location\x18\x01 \x01(\x0b\x32\t.Location\"\xa2\x01\n\x0c\x43hargingData\x12\x17\n\x0f\x62\x61ttery_voltage\x18\x01 \x01(\x05\x12\x1a\n\x12\x62\x61ttery_percentage\x18\x02 \x01(\x05\x12\x10\n\x08\x61mperage\x18\x03 \x01(\x05\x12\x17\n\x0f\x65\x63u_temperature\x18\x04 \x01(\x05\x12\x1b\n\x13\x62\x61ttery_temperature\x18\x05 \x01(\x05\x12\x15\n\rremaining_mah\x18\x06 \x01(\x05\"{\n\rConfiguration\x12\x13\n\x0b\x62le_version\x18\x01 \x01(\x05\x12\x13\n\x0b\x64rv_version\x18\x02 \x01(\x05\x12\x13\n\x0b\x62ms_version\x18\x03 \x01(\x05\x12\x13\n\x0biot_version\x18\x04 \x01(\x05\x12\x16\n\x0eshfw_installed\x18\x05 \x01(\x08\"/\n\x08Location\x12\x10\n\x08latitude\x18\x01 \x01(\x02\x12\x11\n\tlongitude\x18\x02 \x01(\x02\"\xe5\x02\n\nOnlineData\x12\x11\n\ttimestamp\x18\x01 \x01(\x03\x12\x17\n\x0f\x62\x61ttery_voltage\x18\x02 \x01(\x05\x12\r\n\x05speed\x18\x03 \x01(\x05\x12\x11\n\tin_motion\x18\x04 \x01(\x08\x12\x0e\n\x06locked\x18\x05 \x01(\x08\x12\x1a\n\x12\x62\x61ttery_percentage\x18\x06 \x01(\x05\x12\x16\n\x0ethrottle_value\x18\x07 \x01(\x05\x12\x13\n\x0b\x62rake_value\x18\x08 \x01(\x05\x12\x10\n\x08\x61mperage\x18\t \x01(\x05\x12\x17\n\x0f\x65\x63u_temperature\x18\n \x01(\x05\x12\x1b\n\x13\x62\x61ttery_temperature\x18\x0b \x01(\x05\x12\x15\n\rremaining_mah\x18\x0c \x01(\x05\x12\x1b\n\x08location\x18\r \x01(\x0b\x32\t.Location\x12\x0e\n\x06uptime\x18\x0e \x01(\x05\x12\x13\n\x0bis_charging\x18\x0f \x01(\x08\x12\x0f\n\x07trip_km\x18\x10 \x01(\x05\"2\n\x0eOnlineDataDump\x12 \n\x0bonline_data\x18\x01 \x03(\x0b\x32\x0b.OnlineData\"\x0e\n\x0cSHFW_Setting\"\x80\x01\n\tToScooter\x12\x0e\n\x04lock\x18\x01 \x01(\x08H\x00\x12\x15\n\x04mode\x18\x02 \x01(\x0e\x32\x05.ModeH\x00\x12\x16\n\x0cshfw_profile\x18\x03 \x01(\x05H\x00\x12%\n\x0cshfw_setting\x18\x04 \x01(\x0b\x32\r.SHFW_SettingH\x00\x42\r\n\x0bsub_message\"\xe8\x01\n\x0b\x46romScooter\x12\x15\n\x05state\x18\x01 \x01(\x0e\x32\x06.State\x12\x11\n\ttimestamp\x18\x02 \x01(\x03\x12\'\n\rconfiguration\x18\x03 \x01(\x0b\x32\x0e.ConfigurationH\x00\x12+\n\x10online_data_dump\x18\x04 \x01(\x0b\x32\x0f.OnlineDataDumpH\x00\x12\"\n\x0b\x61sleep_data\x18\x05 \x01(\x0b\x32\x0b.AsleepDataH\x00\x12&\n\rcharging_data\x18\x06 \x01(\x0b\x32\r.ChargingDataH\x00\x42\r\n\x0bsub_message*%\n\x04Mode\x12\x07\n\x03\x45\x43O\x10\x00\x12\t\n\x05SPORT\x10\x01\x12\t\n\x05\x44RIVE\x10\x02*-\n\x05State\x12\n\n\x06\x41SLEEP\x10\x00\x12\n\n\x06ONLINE\x10\x01\x12\x0c\n\x08\x43HARGING\x10\x02\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -21,26 +21,26 @@ _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'comms_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  _globals['_MODE']._serialized_start=1195
-  _globals['_MODE']._serialized_end=1232
-  _globals['_STATE']._serialized_start=1234
-  _globals['_STATE']._serialized_end=1279
-  _globals['_CHARGINGDATA']._serialized_start=16
-  _globals['_CHARGINGDATA']._serialized_end=197
-  _globals['_CONFIGURATION']._serialized_start=199
-  _globals['_CONFIGURATION']._serialized_end=322
-  _globals['_DATADUMP']._serialized_start=324
-  _globals['_DATADUMP']._serialized_end=367
-  _globals['_DATAPOINT']._serialized_start=370
-  _globals['_DATAPOINT']._serialized_end=726
-  _globals['_LOCATION']._serialized_start=728
-  _globals['_LOCATION']._serialized_end=775
-  _globals['_LOCATIONDATA']._serialized_start=777
-  _globals['_LOCATIONDATA']._serialized_end=839
-  _globals['_SHFW_SETTING']._serialized_start=841
-  _globals['_SHFW_SETTING']._serialized_end=855
-  _globals['_TOSCOOTER']._serialized_start=858
-  _globals['_TOSCOOTER']._serialized_end=986
-  _globals['_FROMSCOOTER']._serialized_start=989
-  _globals['_FROMSCOOTER']._serialized_end=1193
+  _globals['_MODE']._serialized_start=1191
+  _globals['_MODE']._serialized_end=1228
+  _globals['_STATE']._serialized_start=1230
+  _globals['_STATE']._serialized_end=1275
+  _globals['_ASLEEPDATA']._serialized_start=15
+  _globals['_ASLEEPDATA']._serialized_end=56
+  _globals['_CHARGINGDATA']._serialized_start=59
+  _globals['_CHARGINGDATA']._serialized_end=221
+  _globals['_CONFIGURATION']._serialized_start=223
+  _globals['_CONFIGURATION']._serialized_end=346
+  _globals['_LOCATION']._serialized_start=348
+  _globals['_LOCATION']._serialized_end=395
+  _globals['_ONLINEDATA']._serialized_start=398
+  _globals['_ONLINEDATA']._serialized_end=755
+  _globals['_ONLINEDATADUMP']._serialized_start=757
+  _globals['_ONLINEDATADUMP']._serialized_end=807
+  _globals['_SHFW_SETTING']._serialized_start=809
+  _globals['_SHFW_SETTING']._serialized_end=823
+  _globals['_TOSCOOTER']._serialized_start=826
+  _globals['_TOSCOOTER']._serialized_end=954
+  _globals['_FROMSCOOTER']._serialized_start=957
+  _globals['_FROMSCOOTER']._serialized_end=1189
 # @@protoc_insertion_point(module_scope)
